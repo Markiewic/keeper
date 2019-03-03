@@ -1,7 +1,6 @@
 import { PRODUCTS } from '../actions/types';
 
 const initialState = {
-    source: "none",
     items: []
 };
 

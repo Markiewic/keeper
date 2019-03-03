@@ -51,7 +51,7 @@ class ProductForm extends Component {
     render() {
         return (
             <div>
-                <h1>Add a product</h1>
+                <h2>Add a product</h2>
                 <form onSubmit={this.onSubmit.bind(this)}>
                     <div>
                         <label>Name:</label><br />

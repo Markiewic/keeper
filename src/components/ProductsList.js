@@ -4,17 +4,19 @@ import Product from './Product';
 import { removeProduct } from '../actions/products-actions';
 
 class ProductsList extends Component {
+
     render() {
         const items = this.props.items.map((item, index) => <Product key={index} {...item} removeProduct={this.props.removeProduct} />);
         return (
             <div>
-                <h1>Products</h1>
+                <h2>Available products</h2>
                 <div className="list-group">
                     {items}
                 </div>
             </div>
-        )
+        );
     }
+
 }
 
 function mapStateToProps(state) {
