@@ -4,3 +4,10 @@ export const PRODUCTS = {
     EDIT: "PRODUCTS_EDIT",
     REMOVE: "PRODUCTS_REMOVE"
 }
+
+export const CART = {
+    CONTAIN: "CART_CONTAIN",
+    ADD: "CART_ADD",
+    REMOVE: "CART_REMOVE",
+    CLEAR: "CART_CLEAR"
+}
