@@ -1,6 +1,6 @@
 export const PRODUCTS = {
-    CONTAIN: "CONTAIN",
-    ADD: "ADD",
-    EDIT: "EDIT",
-    REMOVE: "REMOVE"
+    CONTAIN: "PRODUCTS_CONTAIN",
+    ADD: "PRODUCTS_ADD",
+    EDIT: "PRODUCTS_EDIT",
+    REMOVE: "PRODUCTS_REMOVE"
 }
