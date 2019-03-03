@@ -1,5 +1,5 @@
-import { PRODUCTS } from './types';
 import store from '../store';
+import { CART, PRODUCTS } from './types';
 
 const mock = [
     {
@@ -30,7 +30,6 @@ export const fetchProducts = () => dispatch => {
 }
 
 export const addProduct = (item) => dispatch => {
-    
     dispatch({
         type: PRODUCTS.ADD,
         payload: {
@@ -41,8 +40,11 @@ export const addProduct = (item) => dispatch => {
 }
 
 export const removeProduct = (id) => dispatch => {
-    dispatch({
+    [{
         type: PRODUCTS.REMOVE,
         payload: id
-    });
+    }, {
+        type: CART.EXCLUDE_PRODUCT,
+        payload: id
+    }].forEach(dispatch);
 }

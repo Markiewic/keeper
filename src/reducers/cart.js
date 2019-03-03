@@ -48,6 +48,11 @@ export default function (state = initialState, action) {
                 ...state,
                 items
             }
+        case CART.EXCLUDE_PRODUCT:
+            return {
+                ...state,
+                items: state.items.filter(item => item.id !== action.payload)
+            }
         case CART.CLEAR:
             return {
                 ...state,
