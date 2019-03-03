@@ -1,4 +1,5 @@
 import { PRODUCTS } from './types';
+import store from '../store';
 
 const mock = [
     {
@@ -29,14 +30,17 @@ export const fetchProducts = () => dispatch => {
 }
 
 export const addProduct = (item) => dispatch => {
+    
     dispatch({
         type: PRODUCTS.ADD,
-        payload: item
+        payload: {
+            id: store.getState().products.items.reduce((max, item) => item.id > max ? item.id : max, 0) + 1,
+            ...item
+        }
     });
 }
 
 export const removeProduct = (id) => dispatch => {
-    console.log("action", id)
     dispatch({
         type: PRODUCTS.REMOVE,
         payload: id
