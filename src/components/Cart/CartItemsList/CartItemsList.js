@@ -12,10 +12,7 @@ class CartItemsList extends Component {
         });
         return (
             <div>
-                <h2>Your cart:</h2>
-                <div>
-                    {items}
-                </div>
+                {items}
             </div>
         );
     }

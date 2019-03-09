@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import CartProduct from '../CartProduct/CartProduct';
+import { connect } from 'react-redux';
 import { addToCart } from '../../../actions/cart-actions';
 
 class CartProductList extends Component {
@@ -9,10 +9,7 @@ class CartProductList extends Component {
         const items = this.props.items.map((item, index) => <CartProduct key={index} {...item} addToCart={this.props.addToCart} />);
         return (
             <div>
-                <h2>Available products</h2>
-                <div>
-                    {items}
-                </div>
+                {items}
             </div>
         );
     }

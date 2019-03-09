@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './CartItem.module.css';
+import ActionCard from '../../Elements/ActionCard/ActionCard';
 
 class CartItem extends Component {
 
@@ -23,21 +23,21 @@ class CartItem extends Component {
 
     render() {
         return (
-            <div className={styles.root}>
-                <div>
-                    <h3>{this.props.name}</h3>
-                    <small>${this.props.cost}</small>
-                </div>
-                <p>{this.props.description}</p>
-                <div>
-                    Quantity: {this.getQuantity()}, total amount: ${this.getTotalAmount()}
-                </div>
-
-                <div>
-                    <button onClick={this.onAddMore.bind(this)}>Add more</button>
-                    <button onClick={this.onRemoveOne.bind(this)}>Remove one</button>
-                </div>
-            </div>
+            <ActionCard
+                title={this.props.name}
+                indicator={"$" + this.props.cost + " × " + this.getQuantity() + " = $" + this.getTotalAmount()}
+                actions={[
+                    {
+                        title: "Add",
+                        handler: this.onAddMore.bind(this)
+                    },
+                    {
+                        title: "Remove one",
+                        handler: this.onRemoveOne.bind(this)
+                    }
+                ]}
+            >
+            </ActionCard>
         )
     }
 

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CartProductsList from './CartProductsList/CartProductsList';
 import CartItemsList from './CartItemsList/CartItemsList';
+import Separator from '../Elements/Separator/Separator';
+import styles from './Cart.module.css';
 
 class Cart extends Component {
 
@@ -22,14 +24,20 @@ class Cart extends Component {
 
     render() {
         return (
-            <div>
+            <div className={styles.cart}>
                 <h1>Cart</h1>
-                <p>Cart contains {this.getProductsQuantity()} different products, totally {this.getTotalItemsQuantity()} items.</p>
-                <hr />
+                This is the Cart
+                <Separator label="Available products"/>
                 <CartProductsList />
-                <hr />
+                <Separator label="Your cart"/>
                 <CartItemsList />
-                <h3>Total: ${this.getTotalAmount()}</h3>
+                <div className={styles.totalDescription}>
+                    Cart contains {this.getProductsQuantity()} different products, totally {this.getTotalItemsQuantity()} items.
+                </div>
+                <div className={styles.totalAmountWrapper}>
+                    <div className={styles.totalAmountLabel}>Total:</div>
+                    <div className={styles.totalAmount}>${this.getTotalAmount()}</div>
+                </div>
             </div>
         )
     }

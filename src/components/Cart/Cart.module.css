@@ -1,0 +1,28 @@
+.cart {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.totalDescription {
+    margin: 16px 0;
+    padding: 0 36px;
+
+    color: rgba(0, 0, 0, 0.5);
+    
+    text-align: center;
+}
+
+.totalAmountWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.totalAmountLabel {
+    color: rgba(0, 0, 0, 0.5);
+    
+    font-weight: 600;
+}
+
+.totalAmount {
+    font-size: 36px;
+}

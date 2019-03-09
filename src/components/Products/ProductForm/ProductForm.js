@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../../Elements/Button/Button';
 import { connect } from 'react-redux';
 import { addProduct } from '../../../actions/products-actions';
 
@@ -66,7 +67,7 @@ class ProductForm extends Component {
                         <input type="text" name="cost" value={this.state.cost} onChange={this.onCostChanged.bind(this)}></input>
                     </div>
                     <div>
-                        <button type="submit">Add</button>
+                        <Button type="submit">Add</Button>
                     </div>
                 </form>
             </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './CartProduct.module.css';
+import ActionCard from '../../Elements/ActionCard/ActionCard';
 
 class CartProduct extends Component {
 
@@ -10,14 +10,18 @@ class CartProduct extends Component {
 
     render() {
         return (
-            <div className={styles.root}>
-                <div>
-                    <h3>{this.props.name}</h3>
-                    <small>${this.props.cost}</small>
-                </div>
-                <p>{this.props.description}</p>
-                <button onClick={this.onAddToCart.bind(this)}>Add to cart</button>
-            </div>
+            <ActionCard
+                title={this.props.name}
+                indicator={"$" + this.props.cost}
+                actions={[
+                    {
+                        title: "Add to cart",
+                        handler: this.onAddToCart.bind(this)
+                    }
+                ]}
+            >
+                {this.props.description}
+            </ActionCard>
         );
     }
 

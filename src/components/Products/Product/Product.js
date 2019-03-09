@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ActionCard from '../../Elements/ActionCard/ActionCard'; 
 
 class Product extends Component {
 
@@ -6,19 +7,21 @@ class Product extends Component {
         event.preventDefault();
         this.props.removeProduct(this.props.id);
     }
-    
+
     render() {
         return (
-            <div>
-                <div>
-                    <h3>{this.props.name}</h3>
-                    <small>${this.props.cost}</small>
-                </div>
-                <p>{this.props.description}</p>
-                <div>
-                    <button onClick={this.onRemove.bind(this)}>Remove</button>
-                </div>
-            </div>
+            <ActionCard
+                title={this.props.name}
+                indicator={"$" + this.props.cost}
+                actions={[
+                    {
+                        title: "Remove",
+                        handler: this.onRemove.bind(this)
+                    }
+                ]}
+            >
+                {this.props.description}
+            </ActionCard>
         );
     }
 }
