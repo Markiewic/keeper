@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import CartProductsList from './CartProductsList';
-import CartItemsList from './CartItemsList';
+import CartProductsList from './CartProductsList/CartProductsList';
+import CartItemsList from './CartItemsList/CartItemsList';
 
 class Cart extends Component {
 

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
-import Main from './components/Main';
-import Products from './components/Products';
-import Cart from './components/Cart';
+import Main from './components/Main/Main';
+import Products from './components/Products/Products';
+import Cart from './components/Cart/Cart';
 
 import { fetchProducts } from './actions/products-actions';
 

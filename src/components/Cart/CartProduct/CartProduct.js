@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './CartProduct.module.css';
 
 class CartProduct extends Component {
 
@@ -9,7 +10,7 @@ class CartProduct extends Component {
 
     render() {
         return (
-            <div>
+            <div className={styles.root}>
                 <div>
                     <h3>{this.props.name}</h3>
                     <small>${this.props.cost}</small>

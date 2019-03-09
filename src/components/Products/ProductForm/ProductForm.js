@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addProduct } from '../actions/products-actions';
+import { addProduct } from '../../../actions/products-actions';
 
 class ProductForm extends Component {
 

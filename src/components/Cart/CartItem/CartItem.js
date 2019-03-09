@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import styles from './CartItem.module.css';
 
 class CartItem extends Component {
 
-    onAddMore(event) { 
+    onAddMore(event) {
         event.preventDefault();
         this.props.addToCart(this.props.id);
     }
 
-    onRemoveOne(event) { 
+    onRemoveOne(event) {
         event.preventDefault();
         this.props.removeFromCart(this.props.id);
     }
@@ -22,7 +23,7 @@ class CartItem extends Component {
 
     render() {
         return (
-            <div>
+            <div className={styles.root}>
                 <div>
                     <h3>{this.props.name}</h3>
                     <small>${this.props.cost}</small>

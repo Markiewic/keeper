@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Product from './Product';
-import { removeProduct } from '../actions/products-actions';
+import Product from '../Product/Product';
+import { removeProduct } from '../../../actions/products-actions';
 
 class ProductsList extends Component {
 
