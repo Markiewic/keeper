@@ -1,0 +1,43 @@
+.card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    border-radius: 5px;
+    padding: 12px 24px;
+    margin: 16px 0;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+    margin: 16px 0 12px;
+
+    font-weight: 600;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 18px;
+    margin-bottom: 16px;
+}
+
+.indicator {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.actions {
+    text-align: right;
+}
+
+.actionItem {
+    display: inline-block;
+    
+    margin-left: 8px;
+}
