@@ -1,0 +1,4 @@
+.horizontalLayout {
+    display: flex;
+    flex-direction: row;
+}

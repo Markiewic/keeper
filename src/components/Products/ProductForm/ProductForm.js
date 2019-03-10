@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Button from '../../Elements/Button/Button';
 import { connect } from 'react-redux';
 import { addProduct } from '../../../actions/products-actions';
+import { FluidLayout, HorizontalVector, VerticalVector } from '../../Elements';
+import Button from '../../Elements/Button/Button';
 
 class ProductForm extends Component {
 
@@ -36,6 +37,8 @@ class ProductForm extends Component {
     onSubmit(event) {
         event.preventDefault();
 
+        if (!(this.state.name && this.state.cost && !isNaN(+this.state.cost))) return;
+
         this.props.addProduct({
             name: this.state.name,
             description: this.state.description,
@@ -51,26 +54,37 @@ class ProductForm extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Add a product</h2>
+            <React.Fragment>
                 <form onSubmit={this.onSubmit.bind(this)}>
-                    <div>
-                        <label>Name:</label><br />
-                        <input type="text" name="name" value={this.state.name} onChange={this.onNameChanged.bind(this)}></input>
-                    </div>
-                    <div>
-                        <label>Description:</label><br />
-                        <textarea name="description" value={this.state.description} onChange={this.onDescriptionChanged.bind(this)}></textarea>
-                    </div>
-                    <div>
-                        <label>Cost:</label><br />
-                        <input type="text" name="cost" value={this.state.cost} onChange={this.onCostChanged.bind(this)}></input>
-                    </div>
-                    <div>
-                        <Button type="submit">Add</Button>
-                    </div>
+                    <VerticalVector>
+                        <HorizontalVector>
+                            <FluidLayout>
+                                Name:
+                            </FluidLayout>
+                            <FluidLayout>
+                                Cost:
+                            </FluidLayout>
+                        </HorizontalVector>
+                        <HorizontalVector>
+                            <FluidLayout>
+                                <input type="text" name="name" value={this.state.name} onChange={this.onNameChanged.bind(this)}></input>
+                            </FluidLayout>
+                            <FluidLayout>
+                                <input type="text" name="cost" value={this.state.cost} onChange={this.onCostChanged.bind(this)}></input>
+                            </FluidLayout>
+                        </HorizontalVector>
+                        <FluidLayout>
+                            Description:
+                        </FluidLayout>
+                        <FluidLayout>
+                            <textarea name="description" value={this.state.description} onChange={this.onDescriptionChanged.bind(this)}></textarea>
+                        </FluidLayout>
+                        <FluidLayout>
+                            <Button type="submit">Add</Button>
+                        </FluidLayout>
+                    </VerticalVector>
                 </form>
-            </div>
+            </React.Fragment>
         );
     }
 }

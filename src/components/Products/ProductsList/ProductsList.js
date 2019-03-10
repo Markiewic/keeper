@@ -8,12 +8,9 @@ class ProductsList extends Component {
     render() {
         const items = this.props.items.map((item, index) => <Product key={index} {...item} removeProduct={this.props.removeProduct} />);
         return (
-            <div>
-                <h2>Available products</h2>
-                <div className="list-group">
-                    {items}
-                </div>
-            </div>
+            <React.Fragment>
+                {items}
+            </React.Fragment>
         );
     }
 

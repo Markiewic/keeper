@@ -28,11 +28,11 @@ class CartItem extends Component {
                 indicator={"$" + this.props.cost + " × " + this.getQuantity() + " = $" + this.getTotalAmount()}
                 actions={[
                     {
-                        title: "Add",
+                        title: "➕ Add",
                         handler: this.onAddMore.bind(this)
                     },
                     {
-                        title: "Remove one",
+                        title: "➖ Remove",
                         handler: this.onRemoveOne.bind(this)
                     }
                 ]}

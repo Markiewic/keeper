@@ -11,9 +11,9 @@ class CartItemsList extends Component {
             return <CartItem key={index} {...item} {...product} addToCart={this.props.addToCart} removeFromCart={this.props.removeFromCart} />
         });
         return (
-            <div>
+            <React.Fragment>
                 {items}
-            </div>
+            </React.Fragment>
         );
     }
 

@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
+import { Header, VerticalVector, Separator, Layout } from '../Elements';
 
 class Main extends Component {
     render() {
         return (
-            <div>
-                <h1>Main</h1>
-                This is the Root of Application
-            </div>
+            <React.Fragment>
+                <Header>Rkeeper</Header>
+                <Layout>
+                    <VerticalVector>
+                        <Separator label="This is Root of Rkeeper" />
+                    </VerticalVector>
+                </Layout>
+            </React.Fragment>
         );
     }
 }

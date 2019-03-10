@@ -1,14 +1,14 @@
 body {
     margin: 0;
+    font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .content-router {
-    padding: 0 8px;
     padding-bottom: 72px;
 }
 
 .fade-enter {
-    transform: translateY(20px);
+    transform: translateY(10px);
 }
   
 .fade-enter.fade-enter-active {

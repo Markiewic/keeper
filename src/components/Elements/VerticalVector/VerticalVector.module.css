@@ -1,0 +1,4 @@
+.verticalLayout {
+    display: flex;
+    flex-direction: column;
+}

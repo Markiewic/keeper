@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import ProductForm from './ProductForm/ProductForm';
 import ProductsList from './ProductsList/ProductsList';
+import { Header, VerticalVector, Separator, Layout } from '../Elements';
 
 class Products extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Products</h1>
-                This is the Products Section of Application
-                <hr />
-                <ProductForm />
-                <hr />
-                <ProductsList />
-            </div>
+            <React.Fragment>
+                <Header>Products</Header>
+                <Layout>
+                    <VerticalVector>
+                        <ProductForm />
+                        <Separator label="Available Products" />
+                        <ProductsList />
+                    </VerticalVector>
+                </Layout>
+            </React.Fragment>
         );
     }
 }

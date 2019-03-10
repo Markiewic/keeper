@@ -15,7 +15,7 @@ class CartProduct extends Component {
                 indicator={"$" + this.props.cost}
                 actions={[
                     {
-                        title: "Add to cart",
+                        title: "🛒 To cart",
                         handler: this.onAddToCart.bind(this)
                     }
                 ]}

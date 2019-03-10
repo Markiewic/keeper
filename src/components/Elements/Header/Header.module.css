@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 24px 0;
+    
+    background: white;
+}
+
+.title {
+    border-bottom: 2px solid black;
+    
+    font-weight: 700;
+}
