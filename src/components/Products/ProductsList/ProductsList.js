@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Product from '../Product/Product';
 import { removeProduct } from '../../../actions/products-actions';
+import Product from '../Product/Product';
+import { Placeholder } from '../../Elements';
 
 class ProductsList extends Component {
 
@@ -10,6 +11,10 @@ class ProductsList extends Component {
         return (
             <React.Fragment>
                 {items}
+                {!items.length &&
+                    <Placeholder label="There is no products" description="You should add some by the form above.">
+                        <span role="img" aria-label="">✨</span>
+                    </Placeholder>}
             </React.Fragment>
         );
     }
