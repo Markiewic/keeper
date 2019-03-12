@@ -23,7 +23,7 @@ class App extends Component {
             <BrowserRouter>
                 <Route render={({ location }) => (
                     <React.Fragment>
-                        <Menu location={location}/>
+                        <Menu location={location} />
                         <div className="content-router">
                             <TransitionGroup>
                                 <CSSTransition
@@ -31,15 +31,7 @@ class App extends Component {
                                     timeout={300}
                                     classNames="fade"
                                 >
-                                    <div style={{
-                                        // position: "absolute",
-                                        // left: 0,
-                                        // right: 0,
-                                        // top: 0,
-                                        // bottom: 0,
-                                        // marginBottom: "72px"
-                                    }}>
-
+                                    <div>
                                         <Switch location={location}>
                                             <Route path="/" exact component={Main} />
                                             <Route path="/products" component={Products} />

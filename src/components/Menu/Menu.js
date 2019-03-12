@@ -5,7 +5,6 @@ import styles from './Menu.module.css';
 class Menu extends Component {
 
     render() {
-        console.log(this.props)
         return (
             <div className={styles.root}>
                 <Link to="/" className={"/" === this.props.location.pathname ? styles.activated : ""}>Main</Link>
